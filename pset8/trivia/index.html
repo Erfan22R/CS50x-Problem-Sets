@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function correct_check(correct , element){
+                if(correct){
+                    document.getElementById(element).innerHTML = "correct";
+                }
+                else{
+                    document.getElementById(element).innerHTML = "incorrect";
+                }
+            }
+
+            function reset_button(){
+                var btns = document.querySelectorAll(".button");
+                btns.forEach( function(btn){
+                    btn.classList.remove("correct")
+                    btn.classList.remove("incorrect")
+                });
+            }
+
+            function answerget() {
+                reset_button();
+                if(event.target.id == "correct") {
+                    event.target.classList.add("correct");
+                    correct_check(true , "erfan");
+                }
+                else {
+                    event.target.classList.add("incorrect");
+                    correct_check(false , "erfan");
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded" , function(event){
+                var btns = document.querySelectorAll(".button");
+                btns.forEach( function(btn){
+                    btn.addEventListener("click" , answerget);
+                });
+                inputfield = document.querySelector("input");
+                checkbutton = document.querySelector("#check");
+                checkbutton.addEventListener("click" , function(evt) {
+                    if(inputfield.value.toLowerCase() == "8 billion") {
+                        correct_check(true , "freeAnswer");
+                    }
+                    else if(inputfield.value.toLowerCase() == "eight billion"){
+                        correct_check(true , "freeAnswer");
+                    }
+                    else {
+                        correct_check(false , "freeAnswer");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate current population of the world?</h3>
+                <h2 id="erfan"></h2>
+                <button class="button">India</button>
+                <button class="button">America</button>
+                <button class="button" id="correct">china</button>
+                <button class="button">Russia</button>
+                <button class="button">Iran</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the current population of the world?</h3>
+                <h2 id="freeAnswer"></h2>
+                <input type="text">
+                <button id="check" calls="input">check</button>
+            </div>
+        </div>
+    </body>
+</html>

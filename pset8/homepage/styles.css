@@ -1,0 +1,58 @@
+Body {
+    Font-family: Arial, sans-serif;
+    Margin: 0;
+    Padding: 0;
+    Background-color: gray;
+}
+
+Header {
+    Background-color: #333;
+    Color: white;
+    Padding: 20px;
+    Text-align: center;
+}
+
+Nav {
+    Background-color: #444;
+    Overflow: hidden;
+}
+
+Nav a {
+    Color: white;
+    Padding: 14px 20px;
+    Text-decoration: none;
+    Float: left;
+}
+
+Nav a:hover {
+    Background-color: #ddd;
+    Color: black;
+}
+
+Section {
+    Padding: 20px;
+    Margin: 10px;
+}
+
+#MyPhotos {
+    Display: flex;
+    Justify-content: space-around;
+}
+
+.MyPhotos-item img {
+    Width: 10px;
+    Height: 10px;
+    Object-fit: cover;
+}
+
+Footer {
+    Background-color: #333;
+    Color: white;
+    Text-align: center;
+    Padding: 10px;
+}
+
+#mamad {
+    Width: 200px;
+    Height: 250px;
+}
