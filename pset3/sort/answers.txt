@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: sort3 was faster than sort1 and slower than sort2, so it must be bubble sort
+
+sort2 uses: Merge Sort
+
+How do you know?: Because it had the shortest time to run the program and according to the training, merge sort is the fastest method
+
+sort3 uses: Selection Sort
+
+How do you know?: Because it took the longest program execution time and according to the training, selection sort is the slowest method
